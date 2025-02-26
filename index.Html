@@ -1,0 +1,286 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Saleh | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div id="scrollbutton" class="scroll-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- <-------------Header ---------- -->
+    <header class="py-1 px-1 shadow-lg">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="fw-bold text-white">M.A | Full-Stack Developer</span>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link text-white">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link text-white">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link text-white">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link text-white">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link text-white">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menuBtn">
+                <button><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Home -->
+    <section class="home d-flex align-items-center justify-content-center px-4">
+        <div class="corner-effect2 container row align-items-center text-start">
+            <div class="light">
+                <div class="blueLight"></div>
+                <div class="cyanLight"></div>
+            </div>
+            <div class="home-desc col-md-6">
+                <h1 class="fw-bold">I'm Mohamed Abd-elrahman</h1>
+                <p class="mt-2 text-white">Full-Stack Developer (Angular & .NET). I am a highly motivated fullStack Web Developer specializing in Angular Framwork and .NET.</p>
+                <div class="mt-4 d-flex justify-content-start gap-3">
+                    <a mainBtn href="Mohamed-cv.pdf"  download="Mohamed-cv.pdf" class="btn px-4 py-2 fs-5 fw-semibold">Download CV</a>
+                </div>
+                <div class="links-icons mt-5">
+                    <i class="fa-brands fa-xl fa-github me-4"></i>
+                    <i class="fa-brands fa-xl fa-google me-4"></i>
+                    <i class="fa-brands fa-xl fa-linkedin me-4"></i>
+                    <i class="fa-brands fa-xl fa-whatsapp me-4"></i>
+                </div>
+            </div>
+            <div class="home-img col-md-6 d-flex align-items-end justify-content-end">
+                <img class="shadow-lg" src="images/myImg.png"  alt="Profile Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="py-5 px-4 text-white" style="height: fit-content;">
+        <h2 class="about-content fw-bold display-5 text-center">About Me</h2>
+        <span class="line"></span>
+        <div class="p-5 about-content corner-effect container h-100 d-flex flex-column align-items-center justify-content-center">    
+            <!-- Content Wrapper -->
+            <div class="row align-items-center w-100">
+                <div class="about-content col-md-6 d-flex justify-content-center">
+                    <img src="images/full-stack.jpg" class="img-fluid rounded-3 shadow-lg" alt="About Image">
+                </div>
+                <div class="about-content col-md-6 text-md-start text-center">
+                    <p class="mt-4 mx-auto">
+                        I specialize in building scalable and interactive web applications using Angular and .NET. 
+                        Passionate about problem-solving and delivering high-quality software solutions.+2 years of experience in Angular, TypeScript, and .NET API, I thrive on creating seamless, interactive, and high-performance web applications.
+                    </p>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects -->
+    <section id="projects" class="py-5 px-4 text-white">
+        <h2 class="project text-center display-5 fw-bold">Projects</h2>
+        <span class="line"></span>
+        <div class="projects-content container corner-effect2">
+            <div class="row g-4 mt-1">
+                <!-- CartWise -->
+                <div class="project col-md-6 col-lg-4">
+                    <div class="card shadow-lg border-0 h-100 d-flex flex-column">
+                        <img src="images/Cartwise.png" class="card-img-top rounded" alt="CartWise Screenshot">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-semibold">CartWise</h3>
+                            <p class="card-text flex-grow-1">
+                                Developing a full-stack e-commerce web application that provides a seamless online shopping experience. CartWise allows users to browse products, post reviews, add items to their cart, and complete secure transactions.
+                            </p>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://epicgamehub-demo.com" target="_blank" class="btn demo" >Demo</a>
+                                <a href="https://epicgamehub-demo.com" target="_blank" class="btn github">
+                                    GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Palm Clinic -->
+                <div class="project col-md-6 col-lg-4">
+                    <div class="card shadow-lg border-0 h-100 d-flex flex-column">
+                        <img src="images/palm.png" class="card-img-top rounded" alt="Palm Clinic Screenshot">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-semibold">Palm Clinic</h3>
+                            <p class="card-text flex-grow-1">
+                                Palm Clinic is a specialized platform dedicated to the diagnosis and treatment of palm trees. A fully responsive website offering expert care for all types of palm-related issues.
+                            </p>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://palmclinic-demo.com" class="btn demo" >Demo</a>
+                                <a href="https://epicgamehub-demo.com" class="btn github">
+                                    GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Epic GameHub -->
+                <div class="project col-md-6 col-lg-4">
+                    <div class="card shadow-lg border-0 h-100 d-flex flex-column">
+                        <img src="images/gameshub.png" class="card-img-top rounded" alt="Epic GameHub Screenshot">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-semibold">Epic GameHub</h3>
+                            <p class="card-text flex-grow-1">
+                                A responsive platform for online or offline games with the best prices. Features include easy add/remove from the cart, login/register authentication, and categorized game listings.
+                            </p>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://epicgamehub-demo.com" target="_blank" class="btn demo" >Demo</a>
+                                <a href="https://epicgamehub-demo.com" target="_blank" class="btn github">
+                                    GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tasks List -->
+                <div class="project col-md-6 col-lg-4">
+                    <div class="card shadow-lg border-0 h-100 d-flex flex-column">
+                        <img src="images/to do List.png" class="card-img-top rounded" alt="Epic GameHub Screenshot">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-semibold">Tasks list</h3>
+                            <p class="card-text flex-grow-1">
+                                simple To-do List application built with angular and json server.
+                            </p>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://epicgamehub-demo.com" target="_blank" class="btn demo" >Demo</a>
+                                <a href="https://epicgamehub-demo.com" target="_blank" class="btn github">
+                                    GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Skills -->
+    <section id="skills" class="py-5 text-center d-flex flex-column justify-content-center align-items-center">
+        <h2 class="skill text-center text-white display-5 fw-bold">Skills</h2>
+        <span class="line"></span>
+        <div class="container corner-effect" style="padding: 20px;">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-start">
+                <div class="skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="img-fluid"  alt="HTML">
+                    <span class="text-white mt-2">HTML</span>
+                </div>
+                <div class="skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="img-fluid"  alt="CSS">
+                    <span class="text-white mt-2">CSS</span>
+                </div>
+                <div class="skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="img-fluid"  alt="Bootstrap">
+                    <span class="text-white mt-2">Bootstrap</span>
+                </div>
+                <div class="skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="img-fluid" alt="JavaScript">
+                    <span class="text-white mt-2">JavaScript</span>
+                </div>
+                <div class="skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="img-fluid"  alt="TypeScript">
+                    <span class="text-white mt-2">TypeScript</span>
+                </div>
+                <div class="skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" class="img-fluid"  alt="Angular">
+                    <span class="text-white mt-2">Angular</span>
+                </div>
+                <div class=" skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="img-fluid"  alt="GitHub">
+                    <span class="text-white mt-2">GitHub</span>
+                </div>
+                <div class="skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" class="img-fluid" alt="C#">
+                    <span class="text-white mt-2">C#</span>
+                </div>
+                <div class="skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg" class="img-fluid" alt="mySQL">
+                    <span class="text-white mt-2">SQL Server</span>
+                </div>
+                <div class="skill col d-flex flex-column align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" class="img-fluid"  alt=".NET API">
+                    <span class="text-white mt-2">.NET API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- contact  -->
+<section id="contact" class="py-5 text-center text-white" style="height: fit-content; background-color: var(--backgroundColor);">
+    <h2  class="contact text-center text-white display-5 fw-bold">Contact Me</h2>
+    <span class="line"></span>
+    
+    <div class="container h-100 d-flex flex-column justify-content-center" style="width: 50%; padding: 50px;">
+        <div class="corner-effect2">
+            <div contact class="contact">
+                        <form class="p-4 rounded shadow-lg">
+                            <i class="fa-solid fa-envelope" style="font-size: 70px;"></i>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Name" >
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="phone">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="Message" rows="4"></textarea>
+                            </div>
+                        
+                            <div>
+                                <button type="submit" class="btn text-white fw-semibold" style="background-color: var(--btn)">
+                                    Send Message
+                                </button>
+                            </div>
+                        
+                        <div style="font-size: 10px; color: gray; margin-top: 20px;" class="d-flex justify-content-center align-items-center">
+                            <i class="fa-brands fa-xl fa-github me-3"></i>
+                            <i class="fa-brands fa-xl fa-google me-3"></i>
+                            <i class="fa-brands fa-xl fa-linkedin me-3"></i>
+                            <i class="fa-brands fa-xl fa-whatsapp "></i>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="text-center">
+    <span>
+        mohamedrmcf897@gmail.com
+    </span>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
