@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Saleh | Portfolio</title>
+    <title>Mohamed Abd-elrahman | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,11 +21,43 @@
     <div id="scrollbutton" class="scroll-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </div>
+    <div class="sidebar">
+        <div class="closebtn text-start">
+            <button><i class="fa-solid fa-close fa-xl"></i></button>
+        </div>
+        <div class="sidebar-title mt-5">
+            <div class="title">
+                <h1 class="fw-bold text-white">Portfolio</h1>
+            </div>
+        </div>
+        <ul class="links">
+            <li class="nav-item">
+                <a href="#home" class="s-link nav-link text-white">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="s-link nav-link text-white">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#projects" class="s-link nav-link text-white">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills" class="s-link nav-link text-white">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="s-link nav-link text-white">Contact</a>
+            </li>
+        </ul>
+        <div class="s-footer">
+            <small style="color: var(--secondaryColor);">mohamedrmcf897@gmail.com</small>
+        </div>  
+    </div>
 
     <!-- <-------------Header ---------- -->
-    <header class="py-1 px-1 shadow-lg">
+    <header class=" shadow-lg">
         <div class="container d-flex justify-content-between align-items-center">
-            <span class="fw-bold text-white">M.A | Full-Stack Developer</span>
+            <h1>
+                <span class="fw-bold text-white">Port</span><span class="fw-bold" style="color: var(--primaryColor);">folio</span>
+            </h1>
             <nav>
                 <ul class="nav">
                     <li class="nav-item">
@@ -46,7 +78,7 @@
                 </ul>
             </nav>
             <div class="menuBtn">
-                <button><i class="fa-solid fa-bars"></i></button>
+                <button><i class="fa-solid fa-bars fa-xl"></i></button>
             </div>
         </div>
     </header>
@@ -59,10 +91,10 @@
                 <div class="cyanLight"></div>
             </div>
             <div class="home-desc col-md-6">
-                <h1 class="fw-bold">I'm Mohamed Abd-elrahman</h1>
+                <h1 class="fw-bold"><span style="color: white;">I'm </span><span style="color: var(--primaryColor);">Mohamed Abd-Elrahman</span></h1>
                 <p class="mt-2 text-white">Full-Stack Developer (Angular & .NET). I am a highly motivated fullStack Web Developer specializing in Angular Framwork and .NET.</p>
                 <div class="mt-4 d-flex justify-content-start gap-3">
-                    <a mainBtn href="Mohamed-cv.pdf"  download="Mohamed-cv.pdf" class="btn px-4 py-2 fs-5 fw-semibold">Download CV</a>
+                    <a href="Mohamed-cv.pdf"  download="Mohamed-cv.pdf" class="btn px-4 py-2 fs-5 fw-semibold">Download CV</a>
                 </div>
                 <div class="links-icons mt-5">
                     <i class="fa-brands fa-xl fa-github me-4"></i>
@@ -235,11 +267,11 @@
     </section>
     
     <!-- contact  -->
-<section id="contact" class="py-5 text-center text-white" style="height: fit-content; background-color: var(--backgroundColor);">
+<section id="contact" class="py-5 text-center text-white">
     <h2  class="contact text-center text-white display-5 fw-bold">Contact Me</h2>
     <span class="line"></span>
     
-    <div class="container h-100 d-flex flex-column justify-content-center" style="width: 50%; padding: 50px;">
+    <div class="contact-form container h-100 d-flex flex-column justify-content-center">
         <div class="corner-effect2">
             <div contact class="contact">
                         <form class="p-4 rounded shadow-lg">
@@ -258,7 +290,7 @@
                             </div>
                         
                             <div>
-                                <button type="submit" class="btn text-white fw-semibold" style="background-color: var(--btn)">
+                                <button type="submit" class="btn text-white fw-semibold" style="background-color: var(--primaryColor)">
                                     Send Message
                                 </button>
                             </div>

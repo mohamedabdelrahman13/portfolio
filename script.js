@@ -18,6 +18,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// sidebar
+let sidebarShown = false;
+const menuButton = document.querySelector('.menuBtn');
+const closeButton = document.querySelector('.closebtn');
+const sidebar = document.querySelector('.sidebar');
+
+
+menuButton.addEventListener('click' , function(){
+   sidebar.classList.toggle('show');
+   sidebarShown = true;
+})
+
+closeButton.addEventListener('click' , function(){
+   sidebar.classList.toggle('hide');
+   sidebar.classList.remove('show')
+   sidebarShown = false;
+})
+
+
 AOS.init();
 gsap.registerPlugin(ScrollTrigger);
 const home = document.getElementsByClassName('home-desc')

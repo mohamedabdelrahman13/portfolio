@@ -2,12 +2,13 @@
     --header-bgColor :  #3e3e61;
     --backgroundColor : #1E1E2F;
     --secondaryBgColor: #262639;
-    --btn:#1c1c9f;
+    --primaryColor:#1c1c9f;
+    --secondaryColor: cyan;
     --font-color : white;
 
 }
 a.btn{
-    background-color: var(--btn);
+    background-color: var(--primaryColor);
     color: white;
     transition: all 0.3s ease-in-out;
     position: relative;
@@ -53,7 +54,7 @@ body {
     height: 50px;
     bottom: 20px;
     right: 20px;
-    background-color: var(--btn);
+    background-color: var(--primaryColor);
     color: white;
     border: none;
     padding: 20px;
@@ -64,6 +65,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    z-index: 3;
 }
 
 .scroll-to-top i {
@@ -80,13 +82,53 @@ body {
 display: block;
 width: 30px;
 height: 3px;
-background-color: var(--btn);
+background-color: var(--primaryColor);
 margin: 15px auto 50px auto;
 }
 
 #about{
     height: fit-content;
     background-color: var(--backgroundColor);
+}
+
+
+/* sidebar */
+.sidebar{
+    height: 100%;
+    /* background-color: #1c1c9f; */
+    backdrop-filter: blur(60px);
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+    transition: transform .5s ease-in-out;
+    transform: translateX(100%);
+}
+.sidebar ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 100%;   
+    margin: 0;
+    padding: 0; 
+}
+.sidebar ul li{
+  list-style: none;
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.sidebar.hide{
+    transform: translateX(100%);
+}
+
+.sidebar.show{
+    transform: translateX(0);
 }
 /* header */
 header{
@@ -98,7 +140,7 @@ header li a::after{
      height: 2px ;
      width: 0;
      display: block;
-     background-color: #6195ff; 
+     background-color: var(--secondaryColor); 
      transition: .2s ease-in-out; 
 }
 header li a:hover:after{
@@ -108,18 +150,18 @@ header li a:hover:after{
 header .menuBtn{
    display: none;
 }
-header .menuBtn button{
+header .menuBtn button , .closebtn button{
    border-radius: 10px;
    border: none;
-   background-color: var(--btn);
-   color: white;  
+   background: none;
 }
-header .menuBtn button i{
+header .menuBtn button i , .closebtn button i{
   vertical-align: middle;
+  color: white;
 }
 header span{
     font-size: 30px;
-    color: var(--btn);
+    color: var(--primaryColor);
     cursor: pointer;
 }
 /* home */
@@ -130,7 +172,7 @@ section.home{
 }
 
 section.home h1{
-    color:var(--btn);
+    color:var(--primaryColor);
     font-size: 50px;
     text-align: left;
 }
@@ -166,7 +208,7 @@ section#projects .projects-content .card{
     color: white;
 }
 section#projects .projects-content .card .demo{
-    background-color: var(--btn);
+    background-color: var(--primaryColor);
     color: white;
 }
 section#projects .projects-content .card .github{
@@ -184,10 +226,20 @@ section#skills div .skill img{
   height: 120px;
 }
 /* contact */
+
+#contact{
+    height: fit-content;
+    background-color: var(--backgroundColor);
+}
+
+#contact .contact-form{
+    width: 50%;
+    padding: 50px;
+}
 #contact input , #contact textarea{
     color: white;
     border: none;
-    border-bottom: 2px solid var(--btn);
+    border-bottom: 2px solid var(--primaryColor);
     background: none;
 }
 #contact input::placeholder , #contact textarea::placeholder{
@@ -195,12 +247,12 @@ section#skills div .skill img{
     opacity: 1;
 }
 .form-control:focus{
-    border-bottom: 2px solid var(--btn) !important;
+    border-bottom: 2px solid var(--primaryColor) !important;
     outline: none !important; 
     box-shadow: none !important; 
 }
 #contact input:focus{
-    border-bottom: 2px solid var(--btn);
+    border-bottom: 2px solid var(--primaryColor);
    outline: none;
    border: none;
 }
@@ -262,6 +314,53 @@ border-bottom: 3px solid white;
 border-left: 3px solid white;
 }
 
+/* lighting */
+.home .light .blueLight , .home .light .cyanLight{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    filter: blur(40px);
+    z-index: 1;
+}
+.home .light .blueLight{
+    top: 0;
+    left: 0;
+    background-color:#2b2bf6;
+    animation-name: blueLight;
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+}
+.home .light .cyanLight{
+   bottom: 0;
+   right: 0;
+   background-color: var(--secondaryColor);
+   animation-name: cyanLight;
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes cyanLight {
+    0%{
+        right: 0;
+    }
+    50%{
+        right: 80%;
+    }
+    100%{
+        right: 0;
+    }
+}
+@keyframes blueLight {
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 80%;
+    }
+    100%{
+        left: 0;
+    }
+}
 
 /* responsive design */
 @media(max-width:768px){
@@ -293,4 +392,9 @@ border-left: 3px solid white;
      width: 80px;
      height: 80px;
   }
+
+  #contact .contact-form{
+    width: 100%;
+    padding: 25px;
+ }
 }

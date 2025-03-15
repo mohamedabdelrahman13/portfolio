@@ -1,4 +1,2 @@
-# portfolio
-my Portfolio Website.
-
-Live Demo: http://ma-portfolio.runasp.net
+# IntenIntelligence_Portfolio
+Second task Repository
