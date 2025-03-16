@@ -37,6 +37,34 @@ closeButton.addEventListener('click' , function(){
 })
 
 
+// toggle theme 
+const lightThemeBtn = document.querySelector('.light');
+const darkThemeBtn = document.querySelector('.dark');
+
+lightThemeBtn.addEventListener('click' , ()=>{
+    document.body.classList.toggle("light-theme");
+    const isLight = document.body.classList.contains("light-theme");
+    // localStorage.setItem("theme", isLight ? "light" : "dark");
+    if(isLight){
+        localStorage.setItem("theme" , "light");
+        lightThemeBtn.classList.toggle('hide');
+        darkThemeBtn.classList.toggle('show');
+    }
+});
+darkThemeBtn.addEventListener('click' , ()=>{
+    document.body.classList.toggle("light-theme");
+    const isLight = document.body.classList.contains("light-theme");
+    // localStorage.setItem("theme", isLight ? "light" : "dark");
+    if(!isLight){
+        localStorage.setItem("theme" , "dark");
+        darkThemeBtn.classList.toggle('show');
+        lightThemeBtn.classList.toggle('hide');
+    }
+    
+});
+
+window.onload = ()=> localStorage.setItem("theme" , "dark")
+
 AOS.init();
 gsap.registerPlugin(ScrollTrigger);
 const home = document.getElementsByClassName('home-desc')
