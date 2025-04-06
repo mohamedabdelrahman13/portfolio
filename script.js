@@ -49,6 +49,21 @@ lightThemeBtn.addEventListener('click' , ()=>{
         localStorage.setItem("theme" , "light");
         lightThemeBtn.classList.toggle('hide');
         darkThemeBtn.classList.toggle('show');
+        VANTA.NET({
+            el: ".animation",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x1c1c9f,
+            backgroundColor:0xf0efef,
+            points: 19.00,
+            maxDistance: 18.00,
+            spacing: 14.00
+          })
     }
 });
 darkThemeBtn.addEventListener('click' , ()=>{
@@ -59,6 +74,21 @@ darkThemeBtn.addEventListener('click' , ()=>{
         localStorage.setItem("theme" , "dark");
         darkThemeBtn.classList.toggle('show');
         lightThemeBtn.classList.toggle('hide');
+         VANTA.NET({
+            el: ".animation",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x00ffff,
+            backgroundColor:0x1E1E2F,
+            points: 19.00,
+            maxDistance: 18.00,
+            spacing: 14.00
+          })
     }
     
 });
@@ -71,9 +101,15 @@ const home = document.getElementsByClassName('home-desc')
 
 // animation of home section
 
-gsap.from(".home-desc", { opacity: 0, y: -25 , duration: 2 });
-gsap.from(".home-img", { opacity: 0, y: 25, duration: 2 });
+gsap.from(".home-item", { opacity: 0, x: -100 , duration: .5 , stagger:.3});
+// gsap.from(".home-img", { opacity: 0, x: 100, duration: 2 });
 
+    gsap.from(".link", {
+        opacity: 0,
+        y: 200,
+        duration:.3,
+        stagger:.1
+    });
 // GSAP Animation
 
 // animation of about section
@@ -90,6 +126,7 @@ gsap.from(".about-content", {
     duration: 1,
     stagger:.5
 });
+
 // animation of skills section
 
 gsap.from(".skill ", { 
@@ -135,3 +172,27 @@ gsap.from(".contact ", {
     stagger:.5
 });
 
+
+  window.addEventListener('load', () => {
+    const target = document.querySelector(".animation");
+    if (target) {
+        console.log(target)
+        VANTA.NET({
+            el: target,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x00ffff,
+            points: 19.00,
+            maxDistance: 18.00,
+            spacing: 14.00
+        })
+    }
+    else{
+        console.log(target);
+    }
+  });
