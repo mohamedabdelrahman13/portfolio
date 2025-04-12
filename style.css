@@ -218,9 +218,10 @@ header li a::after{
      height: 2px ;
      width: 0;
      display: block;
-     background-color: var(--secondaryColor); 
+     background-color: var(--primaryColor); 
      transition: .2s ease-in-out; 
 }
+
 header li a:hover:after{
   width: 100%;
 }
@@ -251,9 +252,33 @@ section.home{
 
 section.home h1{
     color:var(--primaryColor);
-    font-size: 50px;
+    font-size: 45px;
     text-align: left;
 }
+section.home .typing::after {
+    content: "Full-Stack Web Developer";
+    display: inline-block;
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--primaryColor);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--font-color);
+    width: 0;
+    animation: typingLoop 5s steps(24) infinite, blink 0.7s step-end infinite;
+  }
+  
+  @keyframes typingLoop {
+    0% { width: 0 }
+    40% { width: 20ch }
+    60% { width: 20ch }  
+    100% { width: 0 }   
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+            
 section.home img{
     width: 400px;
     height: 400px;
@@ -275,6 +300,7 @@ section.home img{
 
   section.home .home-desc .links-icons i{
      border-radius: 50%;
+     aspect-ratio: 1;
      background-color:gray;
      padding: 7px;
      color: white;

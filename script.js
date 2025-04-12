@@ -62,7 +62,7 @@ lightThemeBtn.addEventListener('click' , ()=>{
             backgroundColor:0xf0efef,
             points: 19.00,
             maxDistance: 18.00,
-            spacing: 14.00
+            spacing: 20.00
           })
     }
 });
@@ -87,7 +87,7 @@ darkThemeBtn.addEventListener('click' , ()=>{
             backgroundColor:0x1E1E2F,
             points: 19.00,
             maxDistance: 18.00,
-            spacing: 14.00
+            spacing: 20.00
           })
     }
     
@@ -185,11 +185,11 @@ gsap.from(".contact ", {
             minHeight: 200.00,
             minWidth: 200.00,
             scale: 1.00,
-            scaleMobile: 1.00,
+            scaleMobile: 1.5,
             color: 0x00ffff,
             points: 19.00,
             maxDistance: 18.00,
-            spacing: 14.00
+            spacing: 20.00
         })
     }
     else{
