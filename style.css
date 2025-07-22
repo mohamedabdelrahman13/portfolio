@@ -5,9 +5,10 @@
     --primaryColor:#1c1c9f;
     --secondaryColor: cyan;
     --font-color : white;
+    --border-animation-color:var(--secondaryColor);
     --shadow-effect:   
     0 0 20px var(--secondaryColor),
-    0 0 20px rgba(0, 255, 255, 0.6),
+    /* 0 0 20px rgba(0, 255, 255, 0.6), */
     0 0 40px rgba(0, 255, 255, 0.4),
     0 0 55px rgba(0, 255, 255, 0.2);
   transition: box-shadow 0.3s ease;
@@ -21,19 +22,20 @@
     --primaryColor:#1c1c9f;
     --secondaryColor: cyan;
     --font-color : black;
+    --border-animation-color:rgba(0, 0, 255, 0.4);
     --shadow-effect:
     0 0 20px var(--secondaryColor),
-    0 0 20px rgba(0, 0, 255, 0.6),
+    /* 0 0 20px rgba(0, 0, 255, 0.6), */
     0 0 40px rgba(0, 0, 255, 0.4),
     0 0 55px rgba(0, 0, 255, 0.2);
   transition: box-shadow 0.3s ease;
-
+  
 }
 
 
 
 .gradient-text {
-    background: linear-gradient(to right,#3131d3 , var(--primaryColor)); /* right to left */
+    background: linear-gradient(to right,#3131d3 , var(--primaryColor));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -50,7 +52,7 @@
     transform: scale(1.03);
 }
 
-a.github , a.nav-link  , h1 , h2 , h3 , h4 , h5 , h6 , p {
+a.github , a.nav-link  , h1 , h2 , h3 , h4 , h5 , h6 , p , small {
     color: var(--font-color) !important;
     transition: color 0.4s ease;
 }
@@ -244,18 +246,21 @@ header span{
 }
 /* home */
 section.home{
-    /* background-color: var(--backgroundColor); */
     height: 100vh;
     position: relative;
     padding: 10px 0;
 }
 
 section.home h1{
-    color:var(--primaryColor);
     font-size: 45px;
     text-align: left;
 }
-section.home .typing::after {
+section.home h1.track{
+    animation-name: track;
+    animation: track 2s infinite ease-in-out ;
+}
+
+/* section.home .typing::after {
     content: "Full-Stack Web Developer";
     display: inline-block;
     font-weight: bold;
@@ -278,23 +283,17 @@ section.home .typing::after {
   @keyframes blink {
     50% { border-color: transparent; }
   }
-            
+             */
 section.home img{
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50% 80% / 90% 0%;
 }
 .home-img img {
     border: 3px solid rgba(255, 255, 255, 0.2); 
-    border-radius: 50%;
+    /* border-radius: 50%; */
     background-color: var(--backgroundColor);
-
     box-shadow: var(--shadow-effect);
-    /* box-shadow:
-     
-      0 0 20px var(--secondaryColor),
-      0 0 20px rgba(0, 255, 255, 0.6),
-      0 0 40px rgba(0, 255, 255, 0.4),
-      0 0 55px rgba(0, 255, 255, 0.2); */
     transition: box-shadow 0.3s ease;
   }
 
@@ -311,10 +310,25 @@ section.home img{
      color: gray;
   }
  
+  @keyframes track{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+
+  }
 /* about  */
   
 section#about{
     background-color: var(--secondaryBgColor);
+    height: fit-content;
 }
 
 
@@ -328,6 +342,7 @@ section#about p{
 
 section#about img{
     max-width: 90%;
+    border-radius: 50% 50% / 50% 50%;
     height: auto;
     box-shadow: var(--shadow-effect);
 }
@@ -339,9 +354,96 @@ section#about .about-content .card{
    margin-bottom: 20px;
 }
 
+/* experience */
+
+section#experience {
+    background-color: var(--backgroundColor);
+    padding: 3rem 1rem;
+    position: relative;
+  }
+  
+/* middle-line  */
+section#experience .experience-content::after {
+     content: "";
+     position: absolute;
+     width: 4px;
+     height: 100%;
+     top: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     background-color: var(--font-color);
+     z-index: 0;
+  }
+  
+  .experience-content {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  .timeline {
+    position: relative;
+    width: 50%;
+    padding: 2rem;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 6px solid var(--mainColor , var(--primaryColor));
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* left side */
+  .left-align {
+    left: 0;
+    text-align: right;
+  }
+  
+  .left-align::before {
+    right: -15px;
+  }
+  
+  /* right side */
+  .right-align {
+    left: 50%;
+    text-align: left;
+  }
+  
+  .right-align::before {
+    left: -15px;
+  }
+  
+  /* timeline card content */
+  .timeline-card {
+    background-color: var(--secondaryBgColor);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+    
+  .timeline-card img{
+    width: 70px;
+    height: 70px;
+  }
+    
+
+  
 /* projects  */
 section#projects{
-    background-color: var(--backgroundColor);
+    background-color: var(--secondaryBgColor);
 }
 section#projects .projects-content{
     padding: 20px;
@@ -349,8 +451,45 @@ section#projects .projects-content{
 section#projects .projects-content .card{
     background-color: var(--secondaryBgColor);
     color: white;
-    box-shadow: var(--shadow-effect);
+    position: relative;
+    /* box-shadow: var(--shadow-effect); */
 }
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+section#projects .projects-content .card::after , section#projects .projects-content .card::before{
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: calc(100% + 6px);
+   height: calc(100% + 6px);
+   background-image: conic-gradient(from var(--angle),transparent 80% , var(--border-animation-color));
+   top: 50%;
+   left: 50%;
+   transform: translate(-50% , -50%);
+   z-index: -1;
+   padding: 3px;
+   border-radius: 10px;
+   animation: 3s spinBorder linear infinite
+}
+section#projects .projects-content .card::before{
+   filter: blur(1.5rem);
+   opacity: 0.5;
+
+}
+
+@keyframes spinBorder{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
 
 section#projects .projects-content .card .github{
     color: white;
@@ -360,17 +499,22 @@ section#projects .projects-content .card .github{
 /* skills */
 section#skills{
   height: fit-content;
-  background-color: var(--secondaryBgColor);
+  background-color: var(--backgroundColor);
 }
 section#skills div .skill img{
   width: 120px;
   height: 120px;
 }
+
+/* certificates */
+section#certificates{
+    background-color: var(--secondaryBgColor);
+}
 /* contact */
 
 #contact{
     height: fit-content;
-    background-color: var(--backgroundColor);
+    background-color: var(--secondaryBgColor);
 }
 #contact form i.message-icon{
     color: var(--font-color);

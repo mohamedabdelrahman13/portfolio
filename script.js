@@ -143,6 +143,33 @@ gsap.from(".skill ", {
     stagger:.5
 });
 
+// animation of Experience section
+gsap.from(".left-align", { 
+    scrollTrigger: {
+        trigger: "#experience", 
+        start: "top 50%", 
+        end: "top 50%",   
+        scrub: false,   
+        },  
+    opacity: 0,
+    y: 0,
+    x:100,
+    duration: 1,
+    stagger:.5,
+    delay:1
+});
+gsap.from(".right-align", { 
+    scrollTrigger: {
+        trigger: "#experience", 
+        start: "top 50%", 
+        end: "top 50%",   
+        scrub: false,   
+        },  
+    opacity: 0,
+    y: 0,
+    x:-100,
+    duration: 1,
+});
 // animation of projects section
 gsap.from(".project ", { 
     scrollTrigger: {
