@@ -156,7 +156,6 @@ gsap.from(".left-align", {
     x:100,
     duration: 1,
     stagger:.5,
-    delay:1
 });
 gsap.from(".right-align", { 
     scrollTrigger: {
