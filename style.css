@@ -21,7 +21,7 @@
   .light-theme{
     --header-bgColor :  #dfdfdf;
     --backgroundColor :  white;
-    --secondaryBgColor: #f0efef;
+    --secondaryBgColor: #e5e5e5;
     --primaryColor:#1c1c9f;
     --secondaryColor: cyan;
     --font-color : black;
@@ -44,19 +44,63 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-.mainBtn{
+  .mainBtn {
+    border-radius: 7px;
+    background: transparent;
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    padding: 6px 22px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+
+    transition: 
+        background 0.35s ease,
+        color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+/* HOVER */
+.mainBtn:hover {
+  background-color: var(--primaryColor);
+    /* background: linear-gradient(to right, #3131d3, var(--primaryColor)); */
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(49, 49, 211, 0.3);
+    transform: translateY(-3px);
+}
+
+/* ACTIVE */
+.mainBtn:active {
+    transform: translateY(0);
+    background-color: white;
+    color: var(--primaryColor);
+    box-shadow: 0 4px 12px rgba(65, 65, 226, 0.3);
+}
+/* .mainBtn{
     border-radius: 7px;
     background:linear-gradient(to right , #3131d3 , var(--primaryColor));
     color: white;
     border: none;
     padding: 3px 20px;
     text-decoration: none;
-    transition: all .4s ease-in-out;
+    transition: all .2s ease-in-out;  
+    background-size: 200% 100%;
 }
 .mainBtn:hover{
     transform: scale(1.03);
 }
 
+.mainBtn:hover {
+  background-position: right center;
+}
+
+.mainBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(49, 49, 211, 0.25);
+  filter: brightness(0.95);
+} */
 a.github , a.nav-link  , h1 , h2 , h4 , h5 , h6 , p , small {
     color: var(--font-color) !important;
     transition: color 0.4s ease;
@@ -69,6 +113,7 @@ body , section {
 
 body{
   overflow-x: hidden;
+
 }
 a.btn{
     background-color: var(--primaryColor);
@@ -254,9 +299,9 @@ header span{
 }
 /* home */
 section.home{
-    height: 100vh;
+    height: fit-content;
     position: relative;
-    padding: 10px 0;
+    padding-top: 30px ;
 }
 
 section.home h1{
@@ -295,19 +340,69 @@ section.home h1.track{
 
 
 section.home .home-img{
-  background-color: var(--backgroundColor);
-  box-shadow: var(--shadow-effect);
-    width: 30%;
-    height: 30%;
+  position: relative;
+  /* background-color: var(--backgroundColor); */
+   /* box-shadow: var(--shadow-effect); */
+  overflow-y: visible;
+    /* width: 30%; */
     margin:0 auto 0 auto;
-    border-radius: 50% 80% / 90% 0%;
 }
 .home-img img {
-  width: 100%;    
-  height: 100%;
-  border-radius: 50% 80% / 90% 0%;
-  transition: box-shadow 0.3s ease;
+  width: 98%;    
 }
+
+.blue-light{
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  filter: blur(90px);   
+  /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+
+  z-index: -1;
+  top: 10%;
+  left: -10%;
+  background-color: var(--primaryColor);
+  border-radius: 50%;
+}
+.cyan-light{
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  filter: blur(120px); 
+  /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+  z-index: -1;
+  right: -20%;
+  bottom: 10%;
+  background-color: var(--secondaryColor);
+  border-radius: 50%;
+}
+.purple-light{
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  filter: blur(90px); 
+  /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+  z-index: -1;
+  left: -80%;
+  bottom: 30%;
+  background-color: rgb(111, 62, 237);
+  border-radius: 50%;
+}
+/* .star{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  filter:brightness(100px);
+  clip-path: polygon(50% 0%, 55% 41%, 98% 35%, 55% 50%, 79% 91%, 50% 58%, 21% 91%, 46% 50%, 2% 35%, 46% 41%);
+  z-index: 1;
+  bottom: 30%;
+  left: 0;
+  transform: rotate(20deg);
+  background-color: var(--font-color);
+  border-radius: 50%;
+} */
+
+
 
 @media (max-width : 768px){
   
@@ -322,15 +417,15 @@ section.home .home-img{
   section.home .home-desc .links-icons i{
      border-radius: 50%;
      aspect-ratio: 1;
-     background-color:gray;
+     /* background-color:gray; */
      padding: 7px;
-     color: white;
+     /* color: white; */
      transition: all .2s ease-in-out;
   }
-  section.home .home-desc .links-icons i:hover{
+  /* section.home .home-desc .links-icons i:hover{
      background-color:white;
      color: gray;
-  }
+  } */
  
   @keyframes track{
     0%{
@@ -661,6 +756,7 @@ section#experience {
 section#projects{
     background-color: var(--secondaryBgColor);
 }
+
 section#projects .projects-content{
     padding: 20px;
 }
