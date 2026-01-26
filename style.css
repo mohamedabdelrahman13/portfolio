@@ -762,7 +762,7 @@ section#projects .projects-content{
 }
 section#projects .projects-content .card{
     background-color: var(--secondaryBgColor);
-    color: white;
+    color: var(--font-color);
     position: relative;
     /* box-shadow: var(--shadow-effect); */
 }
